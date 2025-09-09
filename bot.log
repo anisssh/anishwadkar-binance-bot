@@ -1,0 +1,6 @@
+2025-09-09 23:32:26,308 [INFO] BasicBot initialized (testnet=True)
+2025-09-09 23:32:39,656 [ERROR] Error placing market order: 'Client' object has no attribute 'future_create_order'
+2025-09-09 23:33:14,801 [INFO] BasicBot initialized (testnet=True)
+2025-09-09 23:33:31,180 [ERROR] Error placing market order: APIError(code=-2019): Margin is insufficient.
+2025-09-09 23:35:25,758 [INFO] BasicBot initialized (testnet=True)
+2025-09-09 23:35:37,286 [INFO] Market order placed: {'orderId': 5644266485, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'O1vziAQd1f59BeBOPSZrHY', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1757441137221}
