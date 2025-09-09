@@ -2,15 +2,19 @@ import logging
 
 
 def place_stop_limit_order(client, symbol, side, quantity, stop_price, limit_price):
-    ticker = client.futures_symbol_ticker(symbol=symbol)
-    current_price = float(ticker['price'])
-
-    if side.upper() == "SELL" and stop_price <= current_price:
-        return {"error": "Stop price must be above current market price for SELL"}
-    if side.upper() == "BUY" and stop_price >= current_price:
-        return {"error": "Stop price must be below current market price for BUY"}
 
     try:
+        # Fetch current market price
+        ticker = client.futures_symbol_ticker(symbol=symbol)
+        current_price = float(ticker['price'])
+        logging.info(f"Current price for {symbol}: {current_price}")
+
+        # Validation
+        # if side.upper() == "SELL" and stop_price <= current_price:
+        #     return {"error": f"Stop price must be above current price ({current_price}) for SELL."}
+        # if side.upper() == "BUY" and stop_price >= current_price:
+        #     return {"error": f"Stop price must be below current price ({current_price}) for BUY."}
+
         order = client.futures_create_order(
             symbol=symbol,
             side=side,
@@ -25,4 +29,3 @@ def place_stop_limit_order(client, symbol, side, quantity, stop_price, limit_pri
     except Exception as e:
         logging.exception("Error in stop_limit order {e} ")
         return {"error", str(e)}
-    

@@ -1,26 +1,60 @@
-# Binance Futures Testnet Bot (Simplified)
+# BasicBot - Binance Futures Testnet Bot
 
-Structure:
+A simple Python bot to interact with Binance Futures Testnet using API keys. This bot fetches account info and can be extended for trading strategies.
 
-[project_root]/
-├── src/
-│   ├── market_orders.py
-│   ├── limit_orders.py
-│   ├── client.py
-│   └── advanced/
-│       ├── oco.py
-│       └── twap.py
-├── bot.py
-├── bot.log
-├── report.pdf
-└── README.md
+---
 
-Setup:
-1. Create a Binance Futures Testnet API key at https://testnet.binancefuture.com
-2. Set BINANCE_API_KEY and BINANCE_API_SECRET env vars or pass them to scripts.
-3. Install dependencies:
-   pip install requirements.txt
+## Table of Contents
 
-Usage:
-- Examples are in src/market_orders.py and src/limit_orders.py.
-- Educational/demo code. Use only on testnet.
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [API Keys](#api-keys)
+- [Usage](#usage)
+- [Logging](#logging)
+- [Notes](#notes)
+
+---
+
+## Features
+
+- Connects to Binance Futures Testnet.
+- Fetch account information.
+- Logs all actions and errors to `bot.log`.
+- Easily extensible for placing orders or other strategies.
+
+---
+
+## Prerequisites
+
+- Python 3.8+
+- pip (Python package manager)
+- Binance account (for API keys)
+
+---
+
+## Setup
+
+1. **Clone the repository** (or download your files):
+   ```bash
+   git clone <your-repo-url>
+   cd <your-repo-folder>
+   ```
+2. **Install dependencies**
+
+   pip install -r requirements.txt
+
+3. **Create .env file in your project root**
+
+   BINANCE_API_KEY=your_api_key_here
+   BINANCE_API_SECRET=your_api_secret_here
+
+4. **Run the bot**
+
+   python bot.py
+
+5. **Logging**
+
+   All actions and errors are logged to bot.log in the project directory.
+
+   Check bot.log for debugging or monitoring bot activity.
