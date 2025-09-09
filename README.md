@@ -46,12 +46,16 @@ A simple Python bot to interact with Binance Futures Testnet using API keys. Thi
 
 3. **Create .env file in your project root**
 
+```bash
    BINANCE_API_KEY=your_api_key_here
    BINANCE_API_SECRET=your_api_secret_here
+```
 
 4. **Run the bot**
 
+```bash
    python bot.py
+```
 
 5. **Logging**
 
