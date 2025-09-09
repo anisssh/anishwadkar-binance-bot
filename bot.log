@@ -4,3 +4,56 @@
 2025-09-09 23:33:31,180 [ERROR] Error placing market order: APIError(code=-2019): Margin is insufficient.
 2025-09-09 23:35:25,758 [INFO] BasicBot initialized (testnet=True)
 2025-09-09 23:35:37,286 [INFO] Market order placed: {'orderId': 5644266485, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'O1vziAQd1f59BeBOPSZrHY', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1757441137221}
+2025-09-10 01:08:38,329 [INFO] BasicBot initialized (testnet=True)
+2025-09-10 01:09:47,028 [ERROR] Error in stop_limit order {e} 
+Traceback (most recent call last):
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/src/advanced/stop_limit.py", line 6, in place_stop_limit_order
+    order = client.futures_create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 6504, in futures_create_order
+    return self._request_futures_api('post', 'order', True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 383, in _request_futures_api
+    return self._request(method, uri, signed, True, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 359, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 368, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2021): Order would immediately trigger.
+2025-09-10 01:14:45,017 [ERROR] Error in stop_limit order {e} 
+Traceback (most recent call last):
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/src/advanced/stop_limit.py", line 6, in place_stop_limit_order
+    current_price = float(ticker['price'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 6504, in futures_create_order
+    return self._request_futures_api('post', 'order', True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 383, in _request_futures_api
+    return self._request(method, uri, signed, True, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 359, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 368, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2021): Order would immediately trigger.
+2025-09-10 01:18:39,653 [ERROR] Error in stop_limit order {e} 
+Traceback (most recent call last):
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/src/advanced/stop_limit.py", line 6, in place_stop_limit_order
+    current_price = float(ticker['price'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 6504, in futures_create_order
+    return self._request_futures_api('post', 'order', True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 383, in _request_futures_api
+    return self._request(method, uri, signed, True, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 359, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anishwadkar/Desktop/BinanceBotAssignment/.venv/lib/python3.12/site-packages/binance/client.py", line 368, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2021): Order would immediately trigger.
+2025-09-10 01:35:08,727 [INFO] stop limit order placed
